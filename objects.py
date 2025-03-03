@@ -10,12 +10,16 @@ class NPC:
 
     def showInfo(self):
         print(f"Имя: {self.name}")
+
+        input()
     
     def dialog(self, text):
-        print("=====================================")
+        print("+-----------------------------------+")
         print(f'{self.name}: ')
         print(f'"{text}"')
-        print("=====================================")
+        print("+-----------------------------------+\n")
+
+        input()
 
 class Character(NPC):
     def __init__(self, name, loyalty):
@@ -26,6 +30,8 @@ class Character(NPC):
         print(f"Имя: {self.name}")
         print(f"Лояльность: +{self.loyalty}")
 
+        input()
+
 class Player1(NPC):
     def __init__(self, name, playerClass):
         super().__init__(name)
@@ -34,6 +40,8 @@ class Player1(NPC):
     def showInfo(self):
         print(f"Имя: {self.name}")
         print(f"Класс: {self.playerClass}")
+
+        input()
 
 # 
 # Шаблон мест. Описвает и хранит свойсва мест. 
@@ -45,7 +53,9 @@ class Place:
         self.about = about
 
     def showInfo(self):
-        print("=====================================")
+        print("+-----------------------------------+")
         print(f'{self.name}: ')
         print(f'"{self.about}"')
-        print("=====================================")
+        print("+-----------------------------------+\n")
+        
+        input()
