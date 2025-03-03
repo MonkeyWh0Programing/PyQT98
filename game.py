@@ -27,11 +27,11 @@ print("2. Нет")
 ############################################################
 choose = int(input("] "))
 if choose == 1:
-    print("вы подобрали ключ")
+    print("вы подобрали ключь")
     gameData.isKeyPlayer = True
 
 elif choose == 2:
-    print("вы не подобрали ключ")
+    print("вы не подобрали ключь")
     gameData.isKeyPlayer = False
 
 else:
