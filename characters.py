@@ -34,4 +34,6 @@ Wolf = obj.NPC("Волчонок") #Персонаж волк
 ############################
 
 Trall = obj.Character("Тралль", 100)
-Obb = obj.Character("Обб", 10)
+
+Obb = obj.Character("Обб", 100)
+

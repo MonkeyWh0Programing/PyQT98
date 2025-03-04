@@ -27,20 +27,18 @@ class Character(NPC):
         self.loyalty = int(loyalty)
     
     def showInfo(self):
-        print(f"Имя: {self.name}")
+        print(f"Имя: {self.name}")   
         print(f"Лояльность: +{self.loyalty}")
 
         input()
 
 class Player1(NPC):
-    default_name = "Grommel"
-    defaiut_class = "Лучник"
-
     def __init__(self, name, playerClass):
         super().__init__(name)
         self.playerClass = playerClass
     
     def showInfo(self):
+        print(f"Ваш персонаж:")
         print(f"Имя: {self.name}")
         print(f"Класс: {self.playerClass}")
 

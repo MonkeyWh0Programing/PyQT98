@@ -11,6 +11,8 @@ import functions as func
 print("=====================================")
 print("    И Г Р А    Н А Ч А Л А С Ь       ")
 print("=====================================")
+print(gameData.TITILE)
+print(gameData.GAMENAME)
 print(f"version: {gameData.VERSION}")
 print(f"{gameData.DESCRIPTION}")
 print("=====================================")
@@ -21,7 +23,6 @@ answ = func.askPlayerInput("Дайте имя вашему персонажу")
 ch.Player.name = answ
 
 while answ not in gameData.playebleClasses:
-
     answ = func.askPlayerInput("Какой класс у ващешего персонажа?")
 
     if answ in gameData.playebleClasses and not answ == "help":
@@ -59,8 +60,18 @@ ch.Trall.dialog(f"Моя лояльность к тебе равна {ch.Trall.l
 ch.Trall.dialog(f"Сейчас я позову сюда {ch.Obb.name}a.")
 ch.Trall.dialog(f"Ей, {ch.Obb.name}, иди-ка сюда!")
 ch.Obb.dialog(f"*пришёл*. Чё надо?")
+
+
+# if ch.Player.playerClass == "друид":
+#     ch.Obb.loyalty = 50
+# if ch.Player.playerClass == "воин":
+#     ch.Obb.loyalty = 100
+# if ch.Player.playerClass == "охотник":
+#     ch.Obb.loyalty = 70
+
+
 ch.Trall.dialog(f"Его лояльность к тебе равна {ch.Obb.loyalty}")
-ch.Trall.dialog(f"Согласись, не очень то и хорошо он к тебе относится!")
+ch.Trall.dialog(f"Так происходит потому-что твой класс это {ch.Player.playerClass}.")
 
 
 
