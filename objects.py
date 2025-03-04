@@ -17,7 +17,7 @@ class NPC:
         print("+-----------------------------------+")
         print(f'{self.name}: ')
         print(f'"{text}"')
-        print("+-----------------------------------+\n")
+        print("+-----------------------------------+")
 
         input()
 
@@ -33,6 +33,9 @@ class Character(NPC):
         input()
 
 class Player1(NPC):
+    default_name = "Grommel"
+    defaiut_class = "Лучник"
+
     def __init__(self, name, playerClass):
         super().__init__(name)
         self.playerClass = playerClass
@@ -54,8 +57,8 @@ class Place:
 
     def showInfo(self):
         print("+-----------------------------------+")
-        print(f'{self.name}: ')
+        print(f'[{self.name}]')
         print(f'"{self.about}"')
-        print("+-----------------------------------+\n")
+        print("+-----------------------------------+")
         
         input()

@@ -2,7 +2,35 @@
 import objects as obj
 import gameData
 
-Player = obj.Player1("Player", "Лучник")#Персонаж игрок
+Player = obj.Player1("Player", "охотник")#Персонаж игрок
+
+
+
+
+
+
+
+
+
+############################
+#          N P C           #
+############################
+
 Wolf = obj.NPC("Волчонок") #Персонаж волк
+
+
+
+
+
+
+
+
+
+
+
+
+############################
+#   C H A R A C T E R S    #
+############################
 
 Trall = obj.Character("Тралль", 100)
