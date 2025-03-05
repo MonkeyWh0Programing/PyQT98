@@ -3,6 +3,7 @@ import gameData
 import characters as ch
 import places as plc
 import functions as func
+import random
 
 #Главный код игры
 ######################################################
@@ -18,9 +19,22 @@ print(f"{gameData.DESCRIPTION}")
 print("=====================================")
 
 input()
+answ = ""
 
-answ = func.askPlayerInput("Дайте имя вашему персонажу")
-ch.Player.name = answ
+while answ == "":
+    answ = func.askPlayerInput("Дайте имя вашему персонажу")
+
+    if answ != "":
+        ch.Player.name = answ
+        break
+    elif answ == "":
+        print("Ввведите значение!")
+        continue
+
+    continue
+
+
+
 
 while answ not in gameData.playebleClasses:
     answ = func.askPlayerInput("Какой класс у ващешего персонажа?")
@@ -29,6 +43,10 @@ while answ not in gameData.playebleClasses:
         ch.Player.playerClass = answ
         ch.Player.showInfo()
         break
+    
+    elif answ == "":
+            print("Ввведите значение!")
+            continue
 
     elif answ not in gameData.playebleClasses and not answ == "help":
         print("Такого класса нет в игре!")
@@ -50,7 +68,6 @@ ch.Trall.dialog(f"Привет, {ch.Player.name}")
 ch.Trall.dialog(f"Это деманстрационная версия игры! {gameData.VERSION}")
 ch.Player.dialog(f"Чудесненько!")
 ch.Trall.dialog(f"Не забывай устанавливать последние обновления!")
-func.characterAskPlayerInput("Тебе нравится?", ch.Trall.name)
 
 ch.Trall.dialog(f"Итак, давай покажу тебе кое что!")
 ch.Trall.dialog(f"В игре есть очки лояльности.")
@@ -71,10 +88,12 @@ ch.Obb.dialog(f"*пришёл*. Чё надо?")
 
 
 ch.Trall.dialog(f"Его лояльность к тебе равна {ch.Obb.loyalty}")
-ch.Trall.dialog(f"Так происходит потому-что твой класс это {ch.Player.playerClass}.")
+ch.Trall.dialog(f"Обзови его, {ch.Player.name}.")
 
 
 
+
+print(gameData.ENDING)
 
 print("=====================================")
 print("    И Г Р А    О К О Н Ч Е Н А       ")
