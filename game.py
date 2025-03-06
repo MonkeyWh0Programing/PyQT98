@@ -49,7 +49,7 @@ while answ not in gameData.playebleClasses:
         print("Такого класса нет в игре!")
         continue
 
-    elif answ == "help":
+    elif answ == "Help":
         print("Игровые классы доступные в игре:")
         print(gameData.playebleClasses)
     
