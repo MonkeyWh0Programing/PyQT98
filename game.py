@@ -22,7 +22,7 @@ input()
 answ = ""
 
 while answ == "":
-    answ = func.askPlayerInput("Дайте имя вашему персонажу")
+    answ = func.askPlayerInput("Дайте имя вашему персонажу").title().strip()
 
     if answ != "":
         ch.Player.name = answ
@@ -34,7 +34,7 @@ while answ == "":
     continue
 
 while answ not in gameData.playebleClasses:
-    answ = func.askPlayerInput("Какой класс у ващешего персонажа?")
+    answ = func.askPlayerInput("Какой класс у ващешего персонажа?").title().strip()
 
     if answ in gameData.playebleClasses and not answ == "help":
         ch.Player.playerClass = answ

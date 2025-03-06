@@ -2,7 +2,7 @@
 import objects as obj
 import gameData
 
-Player = obj.Player1("Player", "охотник")#Персонаж игрок
+Player = obj.Player1("Player", "охотник", "Гоблин")#Персонаж игрок
 
 
 
