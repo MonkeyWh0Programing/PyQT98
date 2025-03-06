@@ -35,7 +35,7 @@ def dialog(name, text):
 
         print(f"╒{borderLenght * "═"}╕")
         print(f'│{name}{nameSpace * " "}│')
-        print(f'├{borderLenght * "┄"}┤')
+        print(f'├{borderLenght * "┄"}┤') 
         print(f'│{text}{textSpace * " "}│')
         print(f"└{borderLenght * "─"}┘")
 
