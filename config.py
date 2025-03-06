@@ -1,28 +1,32 @@
 #настройки для интерфейса
 
-def dialog(name, text):
+def table(name, clas, health):
         
+        title = "Ваш персонаж"
         borderLenght = 0
         textSpace = 0
-        nameSpace = 0
 
-        if len(name) > len(text):
-            borderLenght = len(name)+1
-            textSpace = borderLenght - len(text)-2
-        elif len(name) < len(text):
-            borderLenght = len(text)+2
-            nameSpace = borderLenght - len(name)-1
+        values = [name, clas, health]
+        lenValue = max(values, key=len)
+
+        borderLenght = len(lenValue)
+        textSpaceName = borderLenght - len(name)
+        textSpaceClas = borderLenght - len(clas)
+        textSpaceHealth = borderLenght - len(health)
+        textSpaceTitle =len(lenValue)-3
 
 
-        print(f"┌{borderLenght * "─"}┐")
-        print(f'│{name}:{nameSpace * " "}│')
-        print(f'├{borderLenght * "╌"}┤')
-        print(f'│"{text}"{textSpace * " "}│')
-        print(f"└{borderLenght * "─"}┘")
+
+        print(f"╒═════════{borderLenght*"═"}╕")
+        print(f"│Ваш персонаж{textSpaceTitle* " "}│")
+        print(f"╞════════╤{borderLenght*"═"}╡")
+        print(f"│Имя     │{name}{textSpaceName* " "}│")
+        print(f"├────────┼{borderLenght*"─"}┤")
+        print(f"│Класс   │{clas}{textSpaceClas* " "}│")
+        print(f"├────────┼{borderLenght*"─"}┤")
+        print(f"│Здоровье│{health}{textSpaceHealth* " "}│")
+        print(f"└────────┴{borderLenght*"─"}┘")
 
         input()
-
-
-dialog("Траль", "Привет, дорогой друг! Я очень долго ждал тебя, и вот наконец-то настал момент нашего знакомства!")
 
 

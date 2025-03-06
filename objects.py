@@ -15,14 +15,14 @@ class NPC:
 
         input()
     
-    def dialog(self, text):
-        print("┌───────────────────┐")
-        print(f'│{self.name}:│')
-        print(f'├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤')
-        print(f'│"{text}"│')
-        print("└───────────────────┘")
+    # def dialog(self, text):
+    #     print("┌───────────────────┐")
+    #     print(f'│{self.name}:│')
+    #     print(f'├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┤')
+    #     print(f'│"{text}"│')
+    #     print("└───────────────────┘")
 
-        input()
+    #     input()
 
 class Character(NPC):
     def __init__(self, name, loyalty):

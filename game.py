@@ -9,9 +9,9 @@ import random
 ######################################################
 #               -- Н А Ч А Л О --                    #
 ######################################################
-print("=====================================")
-print("    И Г Р А    Н А Ч А Л А С Ь       ")
-print("=====================================")
+print("╔═══════════════════════════════════╗")
+print("║    И Г Р А    Н А Ч А Л А С Ь     ║")
+print("╚═══════════════════════════════════╝")
 print(gameData.TITILE)
 print(gameData.GAMENAME)
 print(f"version: {gameData.VERSION}")
@@ -32,9 +32,6 @@ while answ == "":
         continue
 
     continue
-
-
-
 
 while answ not in gameData.playebleClasses:
     answ = func.askPlayerInput("Какой класс у ващешего персонажа?")
@@ -57,26 +54,22 @@ while answ not in gameData.playebleClasses:
         print(gameData.playebleClasses)
     
     continue
-    
-    
 
+func.dialog(plc.Forest.name, f"{plc.Forest.about}")
 
+func.dialog(ch.Trall.name, f"Привет, {ch.Player.name}")
+func.dialog(ch.Trall.name, f"Это деманстрационная версия игры! {gameData.VERSION}")
+func.dialog(ch.Player.name, f"Чудесненько!")
+func.dialog(ch.Trall.name, f"Не забывай устанавливать последние обновления!")
 
-plc.Forest.showInfo()
-
-ch.Trall.dialog(f"Привет, {ch.Player.name}")
-ch.Trall.dialog(f"Это деманстрационная версия игры! {gameData.VERSION}")
-ch.Player.dialog(f"Чудесненько!")
-ch.Trall.dialog(f"Не забывай устанавливать последние обновления!")
-
-ch.Trall.dialog(f"Итак, давай покажу тебе кое что!")
-ch.Trall.dialog(f"В игре есть очки лояльности.")
-ch.Trall.dialog(f"Она влияет на отношение персонажей к тебе.")
-ch.Trall.dialog(f"У каждого персонажа он свой!")
-ch.Trall.dialog(f"Моя лояльность к тебе равна {ch.Trall.loyalty}")
-ch.Trall.dialog(f"Сейчас я позову сюда {ch.Obb.name}a.")
-ch.Trall.dialog(f"Ей, {ch.Obb.name}, иди-ка сюда!")
-ch.Obb.dialog(f"*пришёл*. Чё надо?")
+func.dialog(ch.Trall.name, f"Итак, давай покажу тебе кое что!")
+func.dialog(ch.Trall.name, f"В игре есть очки лояльности.")
+func.dialog(ch.Trall.name, f"Она влияет на отношение персонажей к тебе.")
+func.dialog(ch.Trall.name, f"У каждого персонажа он свой!")
+func.dialog(ch.Trall.name, f"Моя лояльность к тебе равна {ch.Trall.loyalty}")
+func.dialog(ch.Trall.name, f"Сейчас я позову сюда {ch.Obb.name}a.")
+func.dialog(ch.Trall.name, f"Ей, {ch.Obb.name}, иди-ка сюда!")
+func.dialog(ch.Obb.name, f"*пришёл*. Чё надо?")
 
 
 # if ch.Player.playerClass == "друид":
@@ -87,16 +80,16 @@ ch.Obb.dialog(f"*пришёл*. Чё надо?")
 #     ch.Obb.loyalty = 70
 
 
-ch.Trall.dialog(f"Его лояльность к тебе равна {ch.Obb.loyalty}")
-ch.Trall.dialog(f"Обзови его, {ch.Player.name}.")
+func.dialog(ch.Obb.name, f"Его лояльность к тебе равна {ch.Obb.loyalty}")
+func.dialog(ch.Obb.name, f"Обзови его, {ch.Player.name}.")
 
 
 
 
 print(gameData.ENDING)
 
-print("=====================================")
-print("    И Г Р А    О К О Н Ч Е Н А       ")
-print("=====================================")
+print("╔═══════════════════════════════════╗")
+print("║    И Г Р А    О К О Н Ч Е Н А     ║")
+print("╚═══════════════════════════════════╝")
 
 
