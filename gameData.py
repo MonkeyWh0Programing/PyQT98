@@ -3,7 +3,7 @@ import characters
 #ИГРОВЫЕ ДАННЫЕ
 
 #СТАНДАРТНЫЕ
-VERSION = "alpha 0.0.7.4"
+VERSION = "alpha 0.0.7.6"
 
 DESCRIPTION = "Text python game. Story of goblin's and troll's swamp.\nНажимайте Enter после фразы для продолжения! При сложностях введите в поле ответа 'help' " 
 

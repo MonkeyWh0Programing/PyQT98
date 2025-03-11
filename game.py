@@ -17,7 +17,7 @@ print(gameData.TITILE)
 print(gameData.GAMENAME)
 print(f"version: {gameData.VERSION}")
 print(f"{gameData.DESCRIPTION}")
-print("=====================================")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 
 input()
 answ = ""
@@ -37,7 +37,7 @@ while answ == "":
 while answ not in gameData.playebleClasses:
     answ = func.askPlayerInput("Какой класс у ващешего персонажа?").title().strip()
 
-    if answ in gameData.playebleClasses and not answ == "help":
+    if answ in gameData.playebleClasses and not answ == "Help":
         ch.Player.playerClass = answ
         ch.Player.showInfo()
         break
@@ -46,11 +46,11 @@ while answ not in gameData.playebleClasses:
             print("Ввведите значение!")
             continue
 
-    elif answ not in gameData.playebleClasses and not answ == "help":
+    elif answ not in gameData.playebleClasses and not answ == "Help":
         print("Такого класса нет в игре!")
         continue
 
-    elif answ == "Help":
+    elif answ == "Help" and not answ in gameData.playebleClasses:
         print("Игровые классы доступные в игре:")
         print(gameData.playebleClasses)
     
@@ -71,15 +71,6 @@ func.dialog(ch.Trall.name, f"Моя лояльность к тебе равна 
 func.dialog(ch.Trall.name, f"Сейчас я позову сюда {ch.Obb.name}a.")
 func.dialog(ch.Trall.name, f"Ей, {ch.Obb.name}, иди-ка сюда!")
 func.dialog(ch.Obb.name, f"*пришёл*. Чё надо?")
-
-
-# if ch.Player.playerClass == "друид":
-#     ch.Obb.loyalty = 50
-# if ch.Player.playerClass == "воин":
-#     ch.Obb.loyalty = 100
-# if ch.Player.playerClass == "охотник":
-#     ch.Obb.loyalty = 70
-
 
 func.dialog(ch.Obb.name, f"Его лояльность к тебе равна {ch.Obb.loyalty}")
 func.dialog(ch.Obb.name, f"Обзови его, {ch.Player.name}.")
